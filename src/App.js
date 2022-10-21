@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter , Routes, Route} from 'react-router-dom';
 import Home from './Component/Home';
 import About from './Component/About';
@@ -7,14 +6,15 @@ import Contact from './Component/Contact';
 import SingleProduct from './Component/SingleProduct';
 import Cart from './Component/Cart';
 import NotFound from './Component/NotFound';
+import Navbar from './Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-     <h1>React E-Commerce Website</h1>
+    <div>
      <BrowserRouter>
+     <Navbar/>
      <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' exact element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/product' element={<Product/>}/>
       <Route path='/contact' element={<Contact/>}/>
