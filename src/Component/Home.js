@@ -9,10 +9,19 @@ const Home = () => {
     image:"./images/dbsimage.jpg"
   }
   return (
-    <div>
-   <HeroSection mydata={data}/>
-   <Services/>
-   <Trusted/>
+    <div className='grid gap-y-3.5'>
+      <div>
+      <HeroSection mydata={data}/>
+
+      </div>
+      <div>
+      <Services/>
+
+      </div>
+      <div className='pb-5'>
+      <Trusted/>
+
+      </div>
     </div>
   )
 }
