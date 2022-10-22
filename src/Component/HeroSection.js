@@ -5,7 +5,7 @@ const HeroSection = ({mydata}) => {
     // console.log(mydata)
     const {name,image}=mydata
   return (
-    <div className='grid  p-2 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl    '>
+    <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl    '>
         <div className='grid  sm:grid-col-2 grid-flow-row gap-5 md: grid-cols-3  lg:grid-cols-5 '>
             <div className='sm:col-span-1 md:col-span-2 text-left space-y-3 lg:col-span-3  '>
                 <p className='text-sky-500 text-lg'>Welcome to</p>
