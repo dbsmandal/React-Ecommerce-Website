@@ -1,9 +1,15 @@
 import React from 'react'
+import HeroSection from './HeroSection'
+
 
 const About = () => {
+  const data={
+    name:"React-Ecommerce Website",
+    image:"./images/heroimage.png"
+  }
   return (
     <div>
-      About page
+      <HeroSection mydata={data} />
     </div>
   )
 }
