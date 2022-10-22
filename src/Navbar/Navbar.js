@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from './logonew.png'
 import { Link } from 'react-router-dom'
+import { FiShoppingCart } from "react-icons/fi";
+
 
 const Navbar = () => {
   return (
@@ -33,6 +35,12 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/contact" className="text-gray-900 dark:text-white hover:underline hover:text-sky-300">Contact</Link>
+              </li>
+              <li>
+                <Link to="/cart" className="text-gray-900 dark:text-white hover:underline hover:text-sky-300">
+                  <FiShoppingCart className='relative h-8 w-8'/>
+                  <span className='absolute top-12 left-3/4 text-lg pt-1 bg-green-300 rounded-3xl'>10</span>
+                </Link>
               </li>
             </ul>
           </div>
