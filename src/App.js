@@ -7,6 +7,7 @@ import SingleProduct from './Component/SingleProduct';
 import Cart from './Component/Cart';
 import NotFound from './Component/NotFound';
 import Navbar from './Navbar/Navbar';
+import Footer from './Component/Footer';
 
 function App() {
   return (
@@ -21,10 +22,8 @@ function App() {
       <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
       <Route path='cart' element={<Cart/>} />
       <Route path='*' element={<NotFound/>} />
-
-
-
-     </Routes>
+       </Routes>
+       <Footer/>
      </BrowserRouter>
 
 
