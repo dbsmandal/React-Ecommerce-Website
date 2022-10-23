@@ -69,7 +69,7 @@ const Contact = () => {
             </form>
 
          
-           
+           <br />
        
         </div>
     </>

@@ -44,7 +44,7 @@ const Footer = () => {
                                 href="https://www.linkedin.com/feed/?trk=nav_back_to_linkedin"
                                 rel="noreferrer"
                                 target="_blank">
-                                <FaLinkedin className="w-10 h-10 hover:bg-emerald-500 rounded-full" />
+                                <FaLinkedin className="w-10 h-10 rounded-full hover:bg-emerald-500" />
                             </a>
 
                      

@@ -22,6 +22,8 @@ const Home = () => {
       <Trusted/>
 
       </div>
+      <br />
+      <br />
     </div>
   )
 }
