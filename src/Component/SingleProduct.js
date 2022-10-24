@@ -3,9 +3,9 @@ import React from 'react'
 const SingleProduct = () => {
   return (
     <div>
-      SingleProduct
+      SingleProduct some
     </div>
-  )
+  )  
 }
 
 export default SingleProduct
