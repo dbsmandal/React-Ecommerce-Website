@@ -1,12 +1,27 @@
 import { useProductContext } from "../Context/ProdutContext";
+import Product from "../Product/Product";
 
 
 const FeatureProduct = () => {
-  const {  featureProducts} =useProductContext()
-console.log(featureProducts , "fetureSection")
+  const {isLoading , featureProducts} =useProductContext();
+  console.log("fetureproductpage " , featureProducts)
+console.log(featureProducts , "fetureSection");
+
+if(isLoading) {
+  return <div> .........Loading</div>
+
+}
   return (
-    <div>
-      featureProducts
+    <div className='grid'>
+      <div className =''>Check Now</div>
+      <div className =''> Our Feature Services</div>
+      <div className='grid grid-cols-3' >
+        {featureProducts.map((curElem)=>{
+          return <Product key={curElem.id} {...curElem} />
+
+        })}
+      </div>
+  
       
     </div>
   )

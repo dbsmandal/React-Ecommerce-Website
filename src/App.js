@@ -1,7 +1,7 @@
 import {BrowserRouter , Routes, Route} from 'react-router-dom';
 import Home from './Component/Home';
 import About from './Component/About';
-import Product from './Component/Product';
+import Products from './Component/Products';
 import Contact from './Component/Contact';
 import SingleProduct from './Component/SingleProduct';
 import Cart from './Component/Cart';
@@ -17,7 +17,7 @@ function App() {
      <Routes>
       <Route path='/' exact element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/product' element={<Product/>}/>
+      <Route path='/products' element={<Products/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
       <Route path='cart' element={<Cart/>} />
