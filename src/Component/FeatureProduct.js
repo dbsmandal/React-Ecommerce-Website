@@ -1,8 +1,12 @@
-import React from 'react'
+import { useProductContext } from "../Context/ProdutContext";
+
 
 const FeatureProduct = () => {
+  const {  featureProducts} =useProductContext()
+console.log(featureProducts , "fetureSection")
   return (
     <div>
+      featureProducts
       
     </div>
   )
