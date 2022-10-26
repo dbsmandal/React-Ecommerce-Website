@@ -12,7 +12,7 @@ const HeroSection = ({mydata}) => {
                 <h1 className='font-semibold text-2xl font-serif'>{name }</h1>
                 <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eligendi culpa sequi officia quidem? Quos a quisquam dolorem dolor explicabo voluptas, laudantium cupiditate qui nemo minus nulla architecto reiciendis maiores.</p>
                 <p>
-                <Link  className='text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2' to='/product'>Shop Now</Link>
+                <Link  className='text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2' to='/products'>Shop Now</Link>
                 </p>
             </div>
             <div className='sm:col-span-1 md:col-span-1 lg:col-span-2'>

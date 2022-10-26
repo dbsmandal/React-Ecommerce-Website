@@ -1,5 +1,6 @@
 import React from 'react'
-import HeroSection from './HeroSection'
+import HeroSection from './HeroSection';
+import FeatureProduct from '../Component/FeatureProduct'
 import Services from './Services'
 import Trusted from './Trusted'
 
@@ -13,6 +14,9 @@ const Home = () => {
       <div>
       <HeroSection mydata={data}/>
 
+      </div>
+      <div>
+        <FeatureProduct/>
       </div>
       <div>
       <Services/>

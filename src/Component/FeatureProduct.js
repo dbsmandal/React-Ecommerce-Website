@@ -1,12 +1,27 @@
 import { useProductContext } from "../Context/ProdutContext";
+import Product from "../Product/Product";
 
 
 const FeatureProduct = () => {
-  const {  featureProducts} =useProductContext()
-console.log(featureProducts , "fetureSection")
+  const {isLoading , featureProducts} =useProductContext();
+  console.log("fetureproductpage " , featureProducts)
+console.log(featureProducts , "fetureSection");
+
+if(isLoading) {
+  return <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl'> .........Loading</div>
+
+}
   return (
-    <div>
-      featureProducts
+    <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl'>
+      <div className ='text-sky-500 text-lg'>Check Now</div>
+      <div className='  font-semibold text-2xl font-serif '> Our Feature Services</div>
+      <div className='grid grid-cols-3 gap-5 p-2  ' >
+        {featureProducts.map((curElem)=>{
+          return <Product key={curElem.id} {...curElem} />
+
+        })}
+      </div>
+  
       
     </div>
   )
