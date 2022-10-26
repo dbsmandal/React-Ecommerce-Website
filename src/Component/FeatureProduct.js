@@ -8,14 +8,14 @@ const FeatureProduct = () => {
 console.log(featureProducts , "fetureSection");
 
 if(isLoading) {
-  return <div> .........Loading</div>
+  return <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl'> .........Loading</div>
 
 }
   return (
-    <div className='grid'>
-      <div className =''>Check Now</div>
-      <div className =''> Our Feature Services</div>
-      <div className='grid grid-cols-3' >
+    <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl'>
+      <div className ='text-sky-500 text-lg'>Check Now</div>
+      <div className='  font-semibold text-2xl font-serif '> Our Feature Services</div>
+      <div className='grid grid-cols-3 gap-5 p-2  ' >
         {featureProducts.map((curElem)=>{
           return <Product key={curElem.id} {...curElem} />
 

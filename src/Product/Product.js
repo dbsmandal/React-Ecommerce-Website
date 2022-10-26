@@ -7,19 +7,19 @@ const Product = (curElem) => {
   return (
    
       <NavLink to={`/singleproduct/${id}`}>
-        <div className='card'>
-          <figure> 
-            <img src={image} alt={name}/>
-            <figcaption>{category}</figcaption>
+        <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+          <figure className=''> 
+            <img className='rounded-t-lg' src={image} alt={name}/>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>{category}</figcaption>
           </figure> 
-          <div className='card data'>
-            <div className="card-data-flex">
-              <h3>{name}</h3>
-              <p>{price}</p>
+   
+            <div className="grid grid-cols-2 gap-2 p-2	 place-items-center">
+              <h3 className='font-bold text-sky-500 text-lg inline-block  '>{name}</h3>
+              <p className='inline-block text-lg font-bold  '> Rs:{price}</p>
             </div>
           </div>
 
-        </div>
+     
 
       </NavLink>
 
