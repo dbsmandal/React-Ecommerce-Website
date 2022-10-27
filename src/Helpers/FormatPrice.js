@@ -1,6 +1,6 @@
 
 const FormatPrice = ({price}) => {
-    console.log("price", price);
+    // console.log("price", price);
   return Intl.NumberFormat("en-IN",{
     style : "currency",
     currency :"INR",

@@ -4,8 +4,8 @@ import Product from "../Product/Product";
 
 const FeatureProduct = () => {
   const {isLoading , featureProducts} =useProductContext();
-  console.log("fetureproductpage " , featureProducts)
-console.log(featureProducts , "fetureSection");
+  // console.log("fetureproductpage " , featureProducts)
+// console.log(featureProducts , "fetureSection");
 
 if(isLoading) {
   return <div className='grid  p-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-5xl'> .........Loading</div>
