@@ -4,28 +4,54 @@ import { useProductContext } from '../Context/ProdutContext'
 const API = 'https://api.pujakaitem.com/api/products';
 
 const SingleProduct = () => {
-  const {getSingleProduct ,singleProductData, }=useProductContext()
+  const { getSingleProduct, singleProductData, } = useProductContext()
 
   //get id parmas for matching url
-  const {id} =useParams();
+  const { id } = useParams();
 
 
 
   //destructuring data
 
-  const {id:alias,name}=singleProductData
+  const { id: alias, name } = singleProductData
 
   // console.log(singleProductData,"single Product page")
 
-  useEffect(()=>{
+  useEffect(() => {
     getSingleProduct(`${API}?id=${id}`)
-  },[]);
+  }, []);
 
   return (
-    <div>
-      SingleProduct some {alias}{name}
-    </div>
-  )  
+    <>
+
+      <div>
+        SingleProduct some {alias} <br />{name}
+
+      </div>
+
+
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+     
+     
+   
+      
+      
+    </>
+
+  )
 }
 
 export default SingleProduct
