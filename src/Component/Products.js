@@ -4,9 +4,29 @@ const Products = () => {
   const {products} =useProductContext()
   console.log(products)
   return (
-    <div>
+
+    <>
       Product Page
-    </div>
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+     
+     
+   
+      
+      
+    </>
   )
 }
 

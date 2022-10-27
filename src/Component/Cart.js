@@ -4,6 +4,25 @@ const Cart = () => {
   return (
     <div>
       Cart 
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+     
+     
+   
+      
+      
     </div>
   )
 }
