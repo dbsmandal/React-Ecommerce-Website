@@ -39,7 +39,7 @@ const Navbar = () => {
               <li>
                 <Link to="/cart" className="text-gray-900 dark:text-white hover:underline hover:text-sky-300">
                   <FiShoppingCart className='relative h-8 w-8'/>
-                  <span className='absolute top-12 left-3/4 text-lg pt-1 bg-green-300 rounded-3xl'>10</span>
+                  <span className='absolute top-12 right-96 text-lg pt-1 text-bg bg-green-300 rounded-sm'>10</span>
                 </Link>
               </li>
             </ul>
