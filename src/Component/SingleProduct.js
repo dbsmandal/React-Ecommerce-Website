@@ -36,11 +36,12 @@ const SingleProduct = () => {
   return (
     <>
       <PageNavigation title={name} />
-      <div className='grid grid-cols-2 gap-5'>
-        <div className=''>
-          <ProductImage image={image} />
+     <div className='bg-white rounded-3xl  shadow-md overflow-hidden p-5'>
+     <div className=' grid  sm: grid-flow-row grid-cols-2 gap-5'>
+        <div className='bg-gray-50 rounded-3xl  shadow-md overflow-hidden p-5'>
+          <ProductImage images={image} />
         </div>
-        <div className=' grid grid-flow-row'>
+        <div className=' grid grid-flow-row bg-gray-50 rounded-3xl  shadow-md overflow-hidden p-5'>
           <h1>{name}</h1>
           <p>{stars} out of 5</p>
           <p>{reviews}  Customer Reviews</p>
@@ -77,18 +78,17 @@ const SingleProduct = () => {
               Brand :<span> {company} </span>
             </p>
           </div>
-
-
-
-
-
-
         </div>
-       
-        <br />
+
+
+
       </div>
+     </div>
 
-
+      <br />
+      <br />
+      <br />
+      <br />
 
 
 
