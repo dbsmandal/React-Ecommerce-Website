@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
+import PageNavigation from  '../Component/PageNavigation'
 import { useParams } from 'react-router-dom';
 import { useProductContext } from '../Context/ProdutContext'
 const API = 'https://api.pujakaitem.com/api/products';
+
 
 const SingleProduct = () => {
   const { getSingleProduct, singleProductData, } = useProductContext()
@@ -25,7 +27,7 @@ const SingleProduct = () => {
     <>
 
       <div>
-        SingleProduct some {alias} <br />{name}
+     <PageNavigation title={name}/>
 
       </div>
 
