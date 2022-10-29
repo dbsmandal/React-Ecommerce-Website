@@ -36,8 +36,10 @@ const SingleProduct = () => {
   return (
     <>
       <PageNavigation title={name} />
-      <div className='grid grid-cols-2'>
-        <div><ProductImage image={image} /></div>
+      <div className='grid grid-cols-2 gap-5'>
+        <div className=''>
+          <ProductImage image={image} />
+        </div>
         <div className=' grid grid-flow-row'>
           <h1>{name}</h1>
           <p>{stars} out of 5</p>
@@ -82,9 +84,7 @@ const SingleProduct = () => {
 
 
         </div>
-        <br />
-        <br />
-        <br />
+       
         <br />
       </div>
 
