@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const AddToCart = ({ singleProductData }) => {
-  const { id, colors, stock } = singleProductData;
+  const {  colors, stock } = singleProductData;
   const [color, setColor] = useState(colors[0])
   const [amount, setAmount] = useState(1);
 
