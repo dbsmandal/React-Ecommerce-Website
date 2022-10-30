@@ -30,3 +30,5 @@ const Star = ({stars , reviews}) => {
 }
 
 export default Star
+
+
