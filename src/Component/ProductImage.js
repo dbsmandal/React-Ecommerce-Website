@@ -7,7 +7,7 @@ const ProductImage = ({ images = [{ url: "" }] }) => {
       <div className='grid justify-center gap-2' >
          {images.map((curElm, index) => {
           return (
-           <div className=' '>
+           <div key={index}>
              <figure >
               <img
                 src={curElm.url}
