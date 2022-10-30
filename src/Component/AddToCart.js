@@ -1,7 +1,8 @@
 import React from 'react'
 
 const AddToCart = ({singleProductData}) => {
-    console.log(singleProductData)
+    console.log(
+        "add to cart page",singleProductData)
   return (
     <div>
       
