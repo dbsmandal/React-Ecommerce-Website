@@ -6,6 +6,8 @@ import { useProductContext } from '../Context/ProdutContext'
 import ProductImage from './ProductImage';
 import { TbTruckDelivery, TbReplace } from 'react-icons/tb'
 import { MdSecurity } from 'react-icons/md'
+import Star from './Star';
+import AddToCart from './AddToCart';
 
 
 
@@ -24,7 +26,7 @@ const SingleProduct = () => {
   //destructuring data
 
   const { name, stars, stock, reviews, price, description, company, category, image } = singleProductData;
-  console.log("singleProduct page data", singleProductData)
+  // console.log("singleProduct page data", singleProductData)
 
 
   // console.log(singleProductData,"single Product page")
@@ -42,9 +44,10 @@ const SingleProduct = () => {
           <ProductImage images={image} />
         </div>
         <div className=' grid grid-flow-row bg-gray-50 rounded-3xl  shadow-md overflow-hidden p-5'>
-          <h1>{name}</h1>
-          <p>{stars} out of 5</p>
-          <p>{reviews}  Customer Reviews</p>
+          <h1 className='text-3xl font-semibold capitalize'>{name}</h1>
+          <Star stars={stars} reviews={reviews} />
+          {/* <p>{stars} out of 5</p>
+          <p>{reviews}  Customer Reviews</p> */}
           <p>MRP: <del><FormatPrice price={price + 250000} /></del></p>
           <p>Deal of the Day : < FormatPrice price={price} /></p>
           <p>{description}</p>
@@ -78,6 +81,10 @@ const SingleProduct = () => {
               Brand :<span> {company} </span>
             </p>
           </div>
+          <hr />
+          {
+            stock >0 && <AddToCart singleProductData={singleProductData} />
+          }
         </div>
 
 
