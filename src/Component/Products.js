@@ -5,7 +5,7 @@ import ProductList from './ProductList'
 import Short from './Short'
 const Products = () => {
   const {products} =useProductContext()
-  console.log(products)
+  console.log( "all products",products)
   return (
 
     <>
@@ -19,7 +19,7 @@ const Products = () => {
           <Short/>
         </div>
         <div>
-          <ProductList/>
+          <ProductList products={products}/>
         </div>
 
 
@@ -29,12 +29,7 @@ const Products = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
      
      
    
