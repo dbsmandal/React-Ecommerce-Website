@@ -1,11 +1,12 @@
 import React from 'react'
-import {useProductContext} from '../Context/ProdutContext'
+import { useFilterContext } from '../Context/FilterContext'
+// import {useProductContext} from '../Context/ProdutContext'
 import FilterSection from './FilterSection'
 import ProductList from './ProductList'
 import Short from './Short'
 const Products = () => {
-  const {products} =useProductContext()
-  console.log( "all products",products)
+  const {filter_products} =useFilterContext();
+  console.log( "filter_products ",filter_products);
   return (
 
     <>
@@ -19,7 +20,7 @@ const Products = () => {
           <Short/>
         </div>
         <div>
-          <ProductList products={products}/>
+          <ProductList products={filter_products}/>
         </div>
 
 
