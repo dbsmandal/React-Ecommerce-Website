@@ -1,12 +1,10 @@
 import React from 'react'
-import { useFilterContext } from '../Context/FilterContext'
-// import {useProductContext} from '../Context/ProdutContext'
 import FilterSection from './FilterSection'
 import ProductList from './ProductList'
 import Short from './Short'
 const Products = () => {
-  const {filter_products} =useFilterContext();
-  console.log( "filter_products ",filter_products);
+  // const {filter_products} =useFilterContext();
+  // console.log( "filter_products ",filter_products);
   return (
 
     <>
@@ -20,7 +18,7 @@ const Products = () => {
           <Short/>
         </div>
         <div>
-          <ProductList products={filter_products}/>
+          <ProductList />
         </div>
 
 
