@@ -17,8 +17,8 @@ const Products = () => {
         <div>
           <Short/>
         </div>
-        <div>
-          <ProductList />
+        <div >
+          <ProductList  />
         </div>
 
 
