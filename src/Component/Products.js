@@ -13,13 +13,15 @@ const Products = () => {
       <div className='col-span-3'>
         <FilterSection/>
       </div>
-      <div className='col-span-9'>
-        <div>
+      <div className='col-span-9 '>
+       <div className='grid gap-5 place-content-center'>
+       <div>
           <Short/>
         </div>
         <div >
           <ProductList  />
         </div>
+       </div>
 
 
       </div>
