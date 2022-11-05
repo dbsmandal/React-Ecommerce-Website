@@ -5,7 +5,7 @@ import { useFilterContext } from '../Context/FilterContext';
 
 
 const Short = () => {
-  const {grid_view,setListView,setGridView,filter_products}=useFilterContext();
+  const {grid_view,setListView,setGridView,filter_products,sorting}=useFilterContext();
   return (
     <div className='grid grid-cols-3 place-items-center '>
       <div className='flex gap-3'>
@@ -16,12 +16,18 @@ const Short = () => {
         <p> <span className='font-bold'>{filter_products.length}</span> Total Products </p>
       </div>
       <div>
-        <select name="" id="">
-          <option value="">one</option>
-          <option value="">two</option>
-          <option value="">three</option>
+        <form action="#">
+          <label htmlFor="sort"></label>
+          <select name="sort" id="sort" onClick={sorting}>
+            <option value="" disabled>Sort</option>
+            <option value="lowest">Price(lowest)</option>
+            <option value="highest">Price(highest)</option>
+            <option value="a-z">Accending(a-z)</option>
+            <option value="z-a">Decending(z-a)</option>
 
-        </select>
+          </select>
+        </form>
+       
       </div>
 
     </div>

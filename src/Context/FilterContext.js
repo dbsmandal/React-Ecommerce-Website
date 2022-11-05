@@ -7,7 +7,8 @@ import reducer from '../Reducer/FilterReducer';
 const initialState={
     filter_products:[],
     all_products:[],
-    grid_view:false
+    grid_view:false,
+    sorting_value:"lowest"
 }
 
 
@@ -25,12 +26,17 @@ const setGridView=()=>{
 const setListView=()=>{
     return dispatch({type:"SET_LIST_VIEW"})
 }
+
+const sorting=()=>{
+    dispatch({type:"GET_SORT_VALUE" })
+
+}
     useEffect(()=>{
         dispatch({type:"FILTER_PRODUCTS",payload:products})
     },[products])
 
     return(
-        <FilterContext.Provider value={{...state,setGridView,setListView}} >
+        <FilterContext.Provider value={{...state,setGridView,setListView,sorting}} >
             {children}
         </FilterContext.Provider>
     )
