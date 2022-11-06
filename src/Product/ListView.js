@@ -3,7 +3,7 @@ import FormatPrice from '../Helpers/FormatPrice';
 import { NavLink } from 'react-router-dom';
 
 const ListView = ({ products }) => {
-  console.log("listView page ", products)
+  // console.log("listView page ", products)
   return (
     <div className='max-w-4xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 gap-10 '>
 
