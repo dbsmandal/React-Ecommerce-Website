@@ -22,7 +22,7 @@ const FilterReducer=(state,action)=>{
         case "GET_SORT_VALUE":
             let userSortValue=document.getElementById("sort")
             let sort_value=userSortValue.options[userSortValue.selectedIndex].value;
-            console.log(sorting_value)
+            console.log("filter reducer page",sort_value)
             return{
                 ...state,
                 sorting_value:sort_value
