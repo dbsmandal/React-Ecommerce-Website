@@ -27,6 +27,38 @@ const FilterReducer=(state,action)=>{
                 ...state,
                 sorting_value:sort_value
             }
+        case "SORTING_PRODUCTS":
+            let newSortData="";
+            let tempSortData=[...action.payload]; //in this case ... use for actual data will be alaways constant 
+            if(state.sorting_value==="lowest") {
+                const sortingproduct=(a,b)=>{
+                    return a.price-b.price
+                }
+                newSortData=tempSortData.sort(sortingproduct)
+                
+            }
+            if(state.sorting_value==="highest") {
+                const sortingproduct=(a,b)=>{
+                    return b.price-a.price
+                }
+                newSortData=tempSortData.sort(sortingproduct)
+                
+            }
+            if(state.sorting_value==="a-z") {
+                newSortData=tempSortData.sort((a,b)=>
+                a.name.localeCompare(b.name))
+            }
+
+            if(state.sorting_value==="z-a") {
+                newSortData=tempSortData.sort((a,b)=>
+                b.name.localeCompare(a.name)
+                )
+            }
+
+            return{
+                ...state,
+                filter_products:newSortData
+            }
 
         default:
             return state
