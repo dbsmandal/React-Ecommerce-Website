@@ -15,10 +15,7 @@ const initialState = {
 // create provider after make sure add provider in your index.js file 
 export const FilterContextProvider = ({ children }) => {
     const { products } = useProductContext();//we need to products all data set in filter_products
-
-
     const [state, dispatch] = useReducer(reducer, initialState);
-
 
     const setGridView = () => {
         return dispatch({ type: "SET_GRID_VIEW" })
@@ -27,14 +24,15 @@ export const FilterContextProvider = ({ children }) => {
         return dispatch({ type: "SET_LIST_VIEW" })
     }
 
-    const sorting = () => {
-        dispatch({ type: "GET_SORT_VALUE" })
+    const sorting = (event) => {
+        let userValue=event.target.value;
+        dispatch({ type: "GET_SORT_VALUE", payload:userValue })
 
     }
 
     useEffect(() => {
-        dispatch({type:"SORTING_PRODUCTS", payload:products})
-    }, [state.sorting_value])
+        dispatch({type:"SORTING_PRODUCTS"})
+    },[products, state.sorting_value])
 
     useEffect(() => {
         dispatch({ type: "FILTER_PRODUCTS", payload: products })

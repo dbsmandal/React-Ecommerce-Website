@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import Services from './Services'
-import Trusted from './Trusted'
+import Trusted from './Trusted';
 
 
 const About = () => {
@@ -17,8 +17,10 @@ const About = () => {
       </div>
       <div>
       <Services/>
+    
 
       </div>
+     
       <div className='pb-5'>
       <Trusted/>
 
