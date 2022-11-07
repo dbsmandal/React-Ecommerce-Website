@@ -20,41 +20,32 @@ const FilterReducer=(state,action)=>{
                 grid_view:false
             }
         case "GET_SORT_VALUE":
-            let userSortValue=document.getElementById("sort")
-            let sort_value=userSortValue.options[userSortValue.selectedIndex].value;
-            console.log("filter reducer page",sort_value)
             return{
                 ...state,
-                sorting_value:sort_value
+                sorting_value:action.payload
             }
         case "SORTING_PRODUCTS":
             let newSortData="";
-            let tempSortData=[...action.payload]; //in this case ... use for actual data will be alaways constant 
-            if(state.sorting_value==="lowest") {
-                const sortingproduct=(a,b)=>{
+            const {filter_products}=state;
+            let tempSortData=[...filter_products]
+            // let tempSortData=[...action.payload]; //in this case ... use for actual data will be alaways constant 
+
+            const sortingproduct=(a,b)=>{
+                if(state.sorting_value==="lowest") {
                     return a.price-b.price
                 }
-                newSortData=tempSortData.sort(sortingproduct)
-                
-            }
-            if(state.sorting_value==="highest") {
-                const sortingproduct=(a,b)=>{
+                if(state.sorting_value==="highest") {
                     return b.price-a.price
                 }
-                newSortData=tempSortData.sort(sortingproduct)
+                if(state.sorting_value==="a-z") {
+                   return a.name.localeCompare(b.name)
+                }
+                if(state.sorting_value==="z-a") {
+                   return b.name.localeCompare(a.name)
+                }
                 
             }
-            if(state.sorting_value==="a-z") {
-                newSortData=tempSortData.sort((a,b)=>
-                a.name.localeCompare(b.name))
-            }
-
-            if(state.sorting_value==="z-a") {
-                newSortData=tempSortData.sort((a,b)=>
-                b.name.localeCompare(a.name)
-                )
-            }
-
+            newSortData=tempSortData.sort(sortingproduct)
             return{
                 ...state,
                 filter_products:newSortData
