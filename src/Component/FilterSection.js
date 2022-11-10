@@ -58,7 +58,9 @@ const FilterSection = () => {
         <select name="company" id="company" onClick={updateFilterValue}>
           {
             companyData.map((curElm,index)=>{
-              return <option key={index} name="company" value={curElm}>{curElm}</option>
+              return(
+                <option key={index}  value={curElm} name="company">{curElm}</option>
+              )
             })
           }
         </select>

@@ -26,7 +26,7 @@ const FilterReducer=(state,action)=>{
             }
         case "SORTING_PRODUCTS":
             let newSortData="";
-            const {filter_products}=state;
+            const {filter_products,sorting_value}=state;
             let tempSortData=[...filter_products]
             // let tempSortData=[...action.payload]; //in this case ... use for actual data will be alaways constant 
 
@@ -71,16 +71,18 @@ const FilterReducer=(state,action)=>{
                     return curElm.name.toLowerCase().includes(text)
                 })
             }
-            if(category){
+            if(category !== "all"){
                 tempFilterProduct=tempFilterProduct.filter((curElm)=>{
                     return curElm.category===category;
                 })
             }
-            if(company){
+           
+            if(company !=="all"){
                 tempFilterProduct=tempFilterProduct.filter((curElm)=>{
-                    return curElm.company===company;
+                    return curElm.company.toLowerCase()===company.toLowerCase();
                 })
             }
+            
            
             
             return{
